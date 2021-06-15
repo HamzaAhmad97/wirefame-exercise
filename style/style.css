@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: #c2c2c2;
+}
+h1 {
+    font-weight: bold;
+}
+body {
+    display: grid;
+    grid-template-rows: 100px 1fr 100px;
+    grid-template-areas: "header "
+                         "main"
+                         "footer" ;
+    gap: 30px;
+}
+header {
+    grid-area: header;
+    display: flex;
+    width: 100%;
+    background: #292929;
+    align-items: center;
+    justify-content: center;
+}
+header img {
+    margin: 10px 30px;
+}
+header nav a {
+    margin: 50px;
+}
+header nav {
+    margin: 0 30px;
+}
+main {
+    grid-area: main;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-direction: column;
+    margin: auto;
+}
+main section {
+    width: 960px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+footer {
+    grid-area: footer;
+    background: #292929;
+    width: 100%;
+}
+section:nth-child(3) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+}
+section:nth-child(3) div{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 400px;
+}
+section:nth-child(3) div p {
+    overflow-y: scroll;
+    width: 100%;
+    text-align: justify;
+    margin: 10px 0;
+    line-height: 20px;
+    font-style: italic;
+}
+section:nth-child(3) div button {
+    width: 150px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    padding: 5px 0;
+    transition-property: background-color;
+    transition-duration: 350ms;
+    transition-timing-function: linear;
+}
+section:nth-child(3) div button:hover {
+    background-color: red;
+}
